@@ -53,6 +53,45 @@ public class RaindropOperationData : MonoBehaviour
         {EOperation.Division, "/"}
     };
     
+    public RaindropOperationData(int firstValue = 1, int secondValue = 1, EOperation operation = EOperation.Sum)
+    {
+        firstNumber = firstValue;
+        secondNumber = secondValue;
+        this.operation = operation;
+    }    
+    
+    public static int GetRandomFirstValue(EOperation operation = EOperation.Sum)
+    {
+        switch(operation) 
+        {
+            case EOperation.Sum:
+                return UnityEngine.Random.Range(0, 10);
+            case EOperation.Difference:
+                return UnityEngine.Random.Range(0, 10);
+            case EOperation.Multiplication:
+                return UnityEngine.Random.Range(0, 10);
+            case EOperation.Division:
+                return UnityEngine.Random.Range(1, 10);
+            default:
+                Debug.LogError("Invalid operation value has been provided");
+                return 0;
+        }
+    }
+
+    public static int GetRandomSecondValue(EOperation operation = EOperation.Sum)
+    {
+        return GetRandomFirstValue(operation);
+    }
+
+
+    //RANDOMIZATION
+    public static EOperation GetRandomOp()
+    {
+        int randomInt = UnityEngine.Random.Range(0, EOperation.GetNames(typeof(EOperation)).Length);
+        return (EOperation) randomInt;
+    }
+
+
 
     // Start is called before the first frame update
     void Start()
