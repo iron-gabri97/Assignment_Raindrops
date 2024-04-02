@@ -20,13 +20,25 @@ public class RaindropOperation : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        //SETTING DATA
+        RaindropOperationData.EOperation randomOP = RaindropOperationData.GetRandomOp();
+
+        raindropOperationData = new RaindropOperationData(RaindropOperationData.GetRandomFirstValue(randomOP), RaindropOperationData.GetRandomSecondValue(randomOP), randomOP);
+
+        SetContent();
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        
+        if(GameController.Instance.isPlaying)
+        {
+            transform.position = transform.position + raindropSpeed * Time.fixedDeltaTime * Vector3.down;
+        }
+        else
+        {
+
+        }
     }
 
     public void CheckResultInput(object sender, ResultInputEventArgs rs)
