@@ -1,9 +1,22 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
+using System;
 
 public class RaindropOperation : MonoBehaviour
 {
+    //DATA
+    [SerializeField] float raindropSpeed = 1.0f;
+    private RaindropOperationData raindropOperationData;
+
+    //PREFAB
+    [SerializeField] private TMP_Text textFirstNumber;
+    [SerializeField] private TMP_Text textSecondNumber;
+    [SerializeField] private TMP_Text textOperation;
+
+    //METHODS
+
     // Start is called before the first frame update
     void Start()
     {
@@ -14,5 +27,14 @@ public class RaindropOperation : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void CheckResultInput(object sender, ResultInputEventArgs rs)
+    {
+        //SOLUTION EVENT IF RESULT CORRECT
+        if (rs.InputValue == this.raindropOperationData.Result)
+        {
+            
+        }
     }
 }
