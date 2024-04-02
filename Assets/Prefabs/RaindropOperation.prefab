@@ -219,6 +219,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf8cdaeb4d94c01419333220d74064a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  raindropSpeed: 1
+  textFirstNumber: {fileID: 2726083716387508720}
+  textSecondNumber: {fileID: 5283981817671881213}
+  textOperation: {fileID: 1200790042824736030}
 --- !u!212 &3916114741311315205
 SpriteRenderer:
   m_ObjectHideFlags: 0

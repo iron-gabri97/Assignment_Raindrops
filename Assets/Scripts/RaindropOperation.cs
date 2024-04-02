@@ -34,7 +34,17 @@ public class RaindropOperation : MonoBehaviour
         //SOLUTION EVENT IF RESULT CORRECT
         if (rs.InputValue == this.raindropOperationData.Result)
         {
+            RaindropEventArgs raindropLostEvent = new(this, RaindropEventArgs.EType.Win);
             
         }
     }
+
+    //FUNCTIONALITIES
+    private void SetContent()
+    {
+        textFirstNumber.text = raindropOperationData.FirstNumber.ToString();
+        textSecondNumber.text = raindropOperationData.SecondNumber.ToString();
+        textOperation.text = RaindropOperationData.dictionaryOP[raindropOperationData.Operation];
+    }
+
 }
