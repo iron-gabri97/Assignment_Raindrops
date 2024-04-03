@@ -6,6 +6,11 @@ public class RaindropController : MonoSingleton<RaindropController>
 {
     //DATA
 
+    //PREFABS
+    [SerializeField] RaindropOperation raindropOpPrefab;
+
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -17,4 +22,27 @@ public class RaindropController : MonoSingleton<RaindropController>
     {
         
     }
+
+    //EVENTS
+    public void ManageRaindropEvent(object sender, RaindropEventArgs ea)
+    {
+        //LOSS
+        if (ea.EventType == RaindropEventArgs.EType.Loss) DestroyRaindrop(ea.LostRaindrop);
+
+        //WIN
+        if (ea.EventType == RaindropEventArgs.EType.Win) SolveRaindrop(ea.LostRaindrop);
+    }    
+
+
+    private void DestroyRaindrop(RaindropOperation toDestroy)
+    {
+
+    }
+
+
+    private void SolveRaindrop(RaindropOperation solvedRaindrop)
+    {
+
+    }
+
 }
