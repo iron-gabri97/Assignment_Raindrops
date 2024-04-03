@@ -630,6 +630,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: LogicGrid
       objectReference: {fileID: 0}
+    - target: {fileID: 6945224557051808149, guid: 7a183403b731ff5498e9d846167c4860, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8103720260112938848, guid: 7a183403b731ff5498e9d846167c4860, type: 3}
       propertyPath: m_LocalPosition.y
       value: -3.5

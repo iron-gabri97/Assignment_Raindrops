@@ -6,6 +6,9 @@ using System;
 
 public class RaindropOperation : MonoBehaviour
 {
+    //EVENTS
+    public static event EventHandler<RaindropEventArgs> RaindropSolved;
+
     //DATA
     [SerializeField] float raindropSpeed = 1.0f;
     private RaindropOperationData raindropOperationData;
@@ -59,4 +62,6 @@ public class RaindropOperation : MonoBehaviour
         textOperation.text = RaindropOperationData.dictionaryOP[raindropOperationData.Operation];
     }
 
+    //EVENT ACTIVATION METHOD
+    private void OnRaindropSolved(RaindropEventArgs eventArg) => RaindropSolved?.Invoke(this, eventArg);
 }
