@@ -1,0 +1,54 @@
+{
+    "name": "RaindropsAction",
+    "maps": [
+        {
+            "name": "Base Action",
+            "id": "525f2b96-aff7-4389-9d68-d1076aab3a00",
+            "actions": [
+                {
+                    "name": "Enter Action",
+                    "type": "Button",
+                    "id": "9cc4d0fc-b6c9-432b-90a4-dcf208fb6c08",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Escape Action",
+                    "type": "Button",
+                    "id": "1bd36a5d-e85f-440f-a45d-95ecfb155d1d",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "53c12633-fb89-40e7-b3ff-291e851cd4dc",
+                    "path": "<Keyboard>/Enter",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Enter Action",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "6038447d-5056-4798-9493-fc65ab1eada3",
+                    "path": "<Keyboard>/escape",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Escape Action",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
