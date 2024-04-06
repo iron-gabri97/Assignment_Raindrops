@@ -4,15 +4,23 @@ using UnityEngine;
 
 public class UI_MainMenu : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    //GAMEOBJECT 
+    [SerializeField] Canvas mainMenuPanel;
+
+
+    private void Awake()
     {
         
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnDestroy()
     {
         
+    }
+
+    //FUNCTIONALITIES
+    public void ManagePlay()
+    {
+        SceneNavigationController.Instance.LoadScene(SceneNavigationController.eSceneName.Raindrops);
     }
 }

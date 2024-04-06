@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class SceneNavigationController : MonoBehaviour
+public class SceneNavigationController : MonoSingleton<SceneNavigationController>
 {
     //ENUMS
     public enum eSceneName
@@ -47,7 +47,7 @@ public class SceneNavigationController : MonoBehaviour
     {
         string intendedScene = StageSceneDictionary[targetScene].AssociatedSceneName;
 
-        if (string.IsNullOrEmpty(intendedScene))
+        if (!string.IsNullOrEmpty(intendedScene))
             SceneManager.LoadScene(intendedScene);
         else
             Debug.Log("Invalid Target Scene: " + targetScene);
