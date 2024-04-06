@@ -197,7 +197,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 5428119045004749669}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 3951603269906487574}
+        m_TargetAssemblyTypeName: UI_MainMenu, Assembly-CSharp
+        m_MethodName: ManageQuit
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &2216177194266831798
 GameObject:
   m_ObjectHideFlags: 0
@@ -543,6 +555,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86c26aed2bb464b40ba04f0c8f5e14dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mainMenuPanel: {fileID: 3357778757077951697}
 --- !u!1 &6919252790098386701
 GameObject:
   m_ObjectHideFlags: 0
@@ -931,7 +944,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 657202071958098734}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 3951603269906487574}
+        m_TargetAssemblyTypeName: UI_MainMenu, Assembly-CSharp
+        m_MethodName: ManagePlay
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &8109624078201034170
 GameObject:
   m_ObjectHideFlags: 0

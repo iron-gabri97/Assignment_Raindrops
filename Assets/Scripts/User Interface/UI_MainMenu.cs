@@ -10,17 +10,35 @@ public class UI_MainMenu : MonoBehaviour
 
     private void Awake()
     {
-        
+        UI_RaindropsMainMenu.MainMenu += ManageMainMenuEvent;
     }
 
     private void OnDestroy()
     {
-        
+        UI_RaindropsMainMenu.MainMenu -= ManageMainMenuEvent;        
     }
 
     //FUNCTIONALITIES
     public void ManagePlay()
     {
         SceneNavigationController.Instance.LoadScene(SceneNavigationController.eSceneName.Raindrops);
+    }
+    public void ManageQuit()
+    {
+        Helper.QuitGame();
+    }
+
+    //EVENT
+    public void ManageMainMenuEvent(object sender, MainMenuEventArgs e)
+    {
+        switch(e.EventType)
+        {
+            case MainMenuEventArgs.EType.MAIN_MENU:
+                mainMenuPanel.gameObject.SetActive(true);
+                break;
+            default:
+                mainMenuPanel.gameObject.SetActive(false);
+                break;
+        }
     }
 }

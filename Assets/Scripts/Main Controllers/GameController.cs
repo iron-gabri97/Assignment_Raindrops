@@ -70,11 +70,11 @@ public class GameController : MonoSingleton<GameController>
                 RestartGame();
                 break;
             case EGameState.Quitting:
-
+                QuitGame();
                 break;
 
             case EGameState.Exiting:
-
+                ExitGame();
                 break;
         }
     }
@@ -85,22 +85,13 @@ public class GameController : MonoSingleton<GameController>
     //QUIT GAME (ABANDON SESSION)
     private static void QuitGame()
     {
-        //TODO: GO BACK TO MAIN MENU
-        //NOW IT QUITS THE GAME
-        ExitGame();
+        SceneNavigationController.Instance.LoadScene(SceneNavigationController.eSceneName.MainMenu);
     }
 
 
     //EXIT GAME
     private static void ExitGame()
     {
-        Application.Quit();
-
-#if UNITY_EDITOR
-        if (UnityEditor.EditorApplication.isPlaying)
-        {
-            UnityEditor.EditorApplication.isPlaying = false;
-        }
-#endif
+        Helper.QuitGame();
     }
 }
