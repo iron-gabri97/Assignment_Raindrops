@@ -262,6 +262,18 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+    - target: {fileID: 459101759172173118, guid: 44a834f7ae15eaa438d8a25760a8cdb0, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 459101759172173118, guid: 44a834f7ae15eaa438d8a25760a8cdb0, type: 3}
+      propertyPath: m_Color.g
+      value: 0.8920429
+      objectReference: {fileID: 0}
+    - target: {fileID: 459101759172173118, guid: 44a834f7ae15eaa438d8a25760a8cdb0, type: 3}
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2066328695942464739, guid: 44a834f7ae15eaa438d8a25760a8cdb0, type: 3}
       propertyPath: m_Name
       value: UIControllerGame
@@ -416,7 +428,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7845112944907501739, guid: 44a834f7ae15eaa438d8a25760a8cdb0, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8340254076394976220, guid: 44a834f7ae15eaa438d8a25760a8cdb0, type: 3}
       propertyPath: m_IsActive

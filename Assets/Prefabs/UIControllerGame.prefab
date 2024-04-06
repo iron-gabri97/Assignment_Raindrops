@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe343f99d9c3b09459bb252bfc912143, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inputField: {fileID: 0}
+  inputField: {fileID: 7926465193284301565}
 --- !u!1 &4480724029204718535
 GameObject:
   m_ObjectHideFlags: 0
@@ -205,7 +205,19 @@ PrefabInstance:
     - target: {fileID: 2595836336341374155, guid: 016dd75b8598b2e4e956ed9d812ee20f, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: c605ffbe44980ba4eb66a72ab5035f71, type: 3}
+      objectReference: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+    - target: {fileID: 2595836336341374155, guid: 016dd75b8598b2e4e956ed9d812ee20f, type: 3}
+      propertyPath: m_Color.b
+      value: 0.9811321
+      objectReference: {fileID: 0}
+    - target: {fileID: 2595836336341374155, guid: 016dd75b8598b2e4e956ed9d812ee20f, type: 3}
+      propertyPath: m_Color.g
+      value: 0.8062639
+      objectReference: {fileID: 0}
+    - target: {fileID: 2595836336341374155, guid: 016dd75b8598b2e4e956ed9d812ee20f, type: 3}
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6360349611209701280, guid: 016dd75b8598b2e4e956ed9d812ee20f, type: 3}
       propertyPath: m_Name
       value: GamePlay Panel
@@ -300,6 +312,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 7154167206545410268, guid: 016dd75b8598b2e4e956ed9d812ee20f, type: 3}
   m_PrefabInstance: {fileID: 2475095211011410421}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &7926465193284301565 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5501494269437704968, guid: 016dd75b8598b2e4e956ed9d812ee20f, type: 3}
+  m_PrefabInstance: {fileID: 2475095211011410421}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2da0c512f12947e489f739169773d7ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &5973336374114752963
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -498,6 +521,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameOver Panel
       objectReference: {fileID: 0}
+    - target: {fileID: 4253190136676192841, guid: cb43bea05a0034e4b8b2cb807c243629, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9052098853065268796, guid: cb43bea05a0034e4b8b2cb807c243629, type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9052098853065268796, guid: cb43bea05a0034e4b8b2cb807c243629, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: c605ffbe44980ba4eb66a72ab5035f71, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
