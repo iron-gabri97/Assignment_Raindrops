@@ -28,8 +28,6 @@ public class GameController : MonoSingleton<GameController>
     // Start is called before the first frame update
     void Start()
     {
-        Debug.Log("GameController is starting!");
-
         SetState(EGameState.Start);
     }
 
@@ -48,20 +46,19 @@ public class GameController : MonoSingleton<GameController>
         {
             case EGameState.Start:
                 //RESERVED FOR INITIALIZATION
-
                 SetState(EGameState.Playing);
                 break;
-
             case EGameState.Playing:
-
+                MenuGameEventArgs menugame_gp = new MenuGameEventArgs(MenuGameEventArgs.EType.MENU_PAUSE_CLOSE);
+                UI_RaindropsGame.OnGamePause(this, menugame_gp);
                 break;
-
             case EGameState.Paused:
-
+                MenuGameEventArgs menugame_p = new MenuGameEventArgs(MenuGameEventArgs.EType.MENU_PAUSE_OPEN);
+                UI_RaindropsGame.OnGamePause(this, menugame_p);
                 break;
-
             case EGameState.GameOver:
-
+                MenuGameEventArgs menugame_go = new MenuGameEventArgs(MenuGameEventArgs.EType.GAME_OVER);
+                UI_RaindropsGame.OnGamePause(this, menugame_go);
                 break;
             case EGameState.Restarting:
                 RestartGame();
@@ -69,7 +66,6 @@ public class GameController : MonoSingleton<GameController>
             case EGameState.Quitting:
                 QuitGame();
                 break;
-
             case EGameState.Exiting:
                 ExitGame();
                 break;
@@ -84,7 +80,6 @@ public class GameController : MonoSingleton<GameController>
     {
         SceneNavigationController.Instance.LoadScene(SceneNavigationController.eSceneName.MainMenu);
     }
-
 
     //EXIT GAME
     private static void ExitGame()
