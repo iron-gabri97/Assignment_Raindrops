@@ -58,8 +58,15 @@ public class RaindropOperationData : MonoBehaviour
         firstNumber = firstValue;
         secondNumber = secondValue;
         this.operation = operation;
-    }    
-    
+    }
+
+    //RANDOMIZATION
+    public static EOperation GetRandomOp()
+    {
+        int randomInt = UnityEngine.Random.Range(0, EOperation.GetNames(typeof(EOperation)).Length);
+        return (EOperation)randomInt;
+    }
+
     public static int GetRandomFirstValue(EOperation operation = EOperation.Sum)
     {
         switch(operation) 
@@ -83,25 +90,4 @@ public class RaindropOperationData : MonoBehaviour
         return GetRandomFirstValue(operation);
     }
 
-
-    //RANDOMIZATION
-    public static EOperation GetRandomOp()
-    {
-        int randomInt = UnityEngine.Random.Range(0, EOperation.GetNames(typeof(EOperation)).Length);
-        return (EOperation) randomInt;
-    }
-
-
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

@@ -23,9 +23,6 @@ public class GameController : MonoSingleton<GameController>
     public bool isGameOver { get { return this.state == EGameState.GameOver; } }
     public bool isPlaying { get { return !(IsPaused || isGameOver); } }
 
-    //GAMEOBJECT
-    [SerializeField] SceneNavigationController sceneNavigationController;
-
 
 
     // Start is called before the first frame update
@@ -80,7 +77,7 @@ public class GameController : MonoSingleton<GameController>
     }
 
     //RESTART GAME
-    private static void RestartGame() => Instance.sceneNavigationController.LoadScene(SceneNavigationController.eSceneName.Raindrops);
+    private static void RestartGame() => SceneNavigationController.Instance.LoadScene(SceneNavigationController.eSceneName.Raindrops);
 
     //QUIT GAME (ABANDON SESSION)
     private static void QuitGame()
