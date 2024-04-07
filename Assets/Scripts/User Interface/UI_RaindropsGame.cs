@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 public class UI_RaindropsGame : MonoSingleton<UI_RaindropsGame>
 {
@@ -17,6 +18,7 @@ public class UI_RaindropsGame : MonoSingleton<UI_RaindropsGame>
 
 
     //PREFAB
+    [SerializeField] private Image scorePanelImage;
     [SerializeField] private TMP_InputField inputField;
     [SerializeField] private TMP_Text textScore;
     [SerializeField] private TMP_Text textLives;
@@ -38,6 +40,8 @@ public class UI_RaindropsGame : MonoSingleton<UI_RaindropsGame>
         inputPlayer.BaseAction.EnterAction.performed += OnEnterPressed;
         //ESCAPE
         inputPlayer.BaseAction.EscapeAction.performed += OnEscapePressed;
+
+        
     }
 
     private void OnDisable()

@@ -49,6 +49,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe343f99d9c3b09459bb252bfc912143, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scorePanelImage: {fileID: 2737778543384584359}
   inputField: {fileID: 7926465193284301565}
   textScore: {fileID: 1659498691559557405}
   textLives: {fileID: 3875899652087688372}
@@ -307,6 +308,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2737778543384584359 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 551628210878867794, guid: 016dd75b8598b2e4e956ed9d812ee20f, type: 3}
+  m_PrefabInstance: {fileID: 2475095211011410421}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &3875899652087688372 stripped

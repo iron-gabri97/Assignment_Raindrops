@@ -16,9 +16,6 @@ public class RaindropController : MonoSingleton<RaindropController>
     [SerializeField] float maxSpawnIterationCooldown = 1.0f;
     [SerializeField] int maxLives = 3;
 
-    //PREFABS
-    [SerializeField] RaindropOperation raindropOpPrefab;
-
 
     //STATS
     int concurrentItems;
@@ -29,6 +26,9 @@ public class RaindropController : MonoSingleton<RaindropController>
     //DATA METHODS
     public bool IsMaxConcurrentItems { get { return maxConcurrentItems <= concurrentItems; } }
     public bool IsGameOverCondition { get { return lives <= 0; } }
+
+    //PREFABS
+    [SerializeField] RaindropOperation raindropOpPrefab;
 
 
     // Start is called before the first frame update
@@ -108,6 +108,7 @@ public class RaindropController : MonoSingleton<RaindropController>
 
     private void SolveRaindrop(RaindropOperation solvedRaindrop)
     {
+        score = score + solvedRaindrop.RaindropOperationData.GetRaindropScore();
         UI_RaindropsGame.Instance.SetScore(score);
 
         //DESTROY
