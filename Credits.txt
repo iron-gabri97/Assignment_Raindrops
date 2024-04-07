@@ -1,0 +1,6 @@
+Game developed by Gabriele Ferilli
+
+Credits for external assets
+Raindrop Sprite: Water droplet by madartzgraphics: https://pixabay.com/vectors/water-water-droplet-droplet-2072211/
+
+Game background: Cloudy Skyboxes by Spiney (license CC-BY 3.0): link: https://opengameart.org/content/cloudy-skyboxes
