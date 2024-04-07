@@ -85,9 +85,9 @@ public class RaindropOperation : MonoBehaviour
         }
         else
         {
-            textFirstNumber.text = ">:)";
+            textFirstNumber.text = ">:(";
             textOperation.text = "?";
-            textSecondNumber.text = ">:d";
+            textSecondNumber.text = ">:(";
         }
     }
 

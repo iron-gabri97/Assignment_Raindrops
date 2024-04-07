@@ -18,6 +18,8 @@ public class UI_RaindropsGame : MonoSingleton<UI_RaindropsGame>
 
     //PREFAB
     [SerializeField] private TMP_InputField inputField;
+    [SerializeField] private TMP_Text textScore;
+    [SerializeField] private TMP_Text textLives;
 
     // Start is called before the first frame update
     void Start()
@@ -86,6 +88,9 @@ public class UI_RaindropsGame : MonoSingleton<UI_RaindropsGame>
     }
 
     //UTILITIES
+    public void SetScore(float newScore) => textScore.text = newScore.ToString();
+    public void SetLives(int newLives) => textLives.text = newLives.ToString();
+
 
 
     //EVENT ACTIVATION METHOD

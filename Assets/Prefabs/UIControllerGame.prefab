@@ -50,6 +50,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inputField: {fileID: 7926465193284301565}
+  textScore: {fileID: 1659498691559557405}
+  textLives: {fileID: 3875899652087688372}
 --- !u!1 &4480724029204718535
 GameObject:
   m_ObjectHideFlags: 0
@@ -171,6 +173,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 282608302549111260}
     m_Modifications:
+    - target: {fileID: 823077906925328366, guid: 016dd75b8598b2e4e956ed9d812ee20f, type: 3}
+      propertyPath: m_fontSize
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 1698063534403102017, guid: 016dd75b8598b2e4e956ed9d812ee20f, type: 3}
+      propertyPath: m_fontSize
+      value: 18
+      objectReference: {fileID: 0}
     - target: {fileID: 2595836336341374155, guid: 016dd75b8598b2e4e956ed9d812ee20f, type: 3}
       propertyPath: m_Type
       value: 1
@@ -191,9 +201,17 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5778377745165632836, guid: 016dd75b8598b2e4e956ed9d812ee20f, type: 3}
+      propertyPath: m_fontSize
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 6360349611209701280, guid: 016dd75b8598b2e4e956ed9d812ee20f, type: 3}
       propertyPath: m_Name
       value: GamePlay Panel
+      objectReference: {fileID: 0}
+    - target: {fileID: 6748100890846722816, guid: 016dd75b8598b2e4e956ed9d812ee20f, type: 3}
+      propertyPath: m_fontSize
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 7154167206545410268, guid: 016dd75b8598b2e4e956ed9d812ee20f, type: 3}
       propertyPath: m_Pivot.x
@@ -280,6 +298,28 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 016dd75b8598b2e4e956ed9d812ee20f, type: 3}
+--- !u!114 &1659498691559557405 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3845780234779033832, guid: 016dd75b8598b2e4e956ed9d812ee20f, type: 3}
+  m_PrefabInstance: {fileID: 2475095211011410421}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &3875899652087688372 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1698063534403102017, guid: 016dd75b8598b2e4e956ed9d812ee20f, type: 3}
+  m_PrefabInstance: {fileID: 2475095211011410421}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &4688802261797191977 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7154167206545410268, guid: 016dd75b8598b2e4e956ed9d812ee20f, type: 3}
@@ -490,13 +530,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2118038710216372815, guid: cb43bea05a0034e4b8b2cb807c243629, type: 3}
+      propertyPath: m_fontSize
+      value: 18
+      objectReference: {fileID: 0}
     - target: {fileID: 4253190136676192841, guid: cb43bea05a0034e4b8b2cb807c243629, type: 3}
       propertyPath: m_Name
       value: GameOver Panel
       objectReference: {fileID: 0}
     - target: {fileID: 4253190136676192841, guid: cb43bea05a0034e4b8b2cb807c243629, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9052098853065268796, guid: cb43bea05a0034e4b8b2cb807c243629, type: 3}
       propertyPath: m_Type

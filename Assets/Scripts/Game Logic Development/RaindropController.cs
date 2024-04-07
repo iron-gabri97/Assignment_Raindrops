@@ -14,6 +14,7 @@ public class RaindropController : MonoSingleton<RaindropController>
     [SerializeField] int maxConcurrentItems = 3;
     [SerializeField] int maxItemsPerSpawnIteration = 1;
     [SerializeField] float maxSpawnIterationCooldown = 1.0f;
+    [SerializeField] int maxLives = 3;
 
     //PREFABS
     [SerializeField] RaindropOperation raindropOpPrefab;
@@ -22,9 +23,12 @@ public class RaindropController : MonoSingleton<RaindropController>
     //STATS
     int concurrentItems;
     float spawnIterationCooldown;
+    float score;
+    int lives;
 
     //DATA METHODS
     public bool IsMaxConcurrentItems { get { return maxConcurrentItems <= concurrentItems; } }
+    public bool IsGameOverCondition { get { return lives <= 0; } }
 
 
     // Start is called before the first frame update
@@ -36,6 +40,9 @@ public class RaindropController : MonoSingleton<RaindropController>
         List<RaindropOperation> initialRaindrops = FindObjectsOfType<RaindropOperation>().ToList();
         concurrentItems = initialRaindrops.Count;
 
+        lives = maxLives;
+        UI_RaindropsGame.Instance.SetScore(score);
+        UI_RaindropsGame.Instance.SetLives(lives);
 
     }
 
@@ -86,9 +93,12 @@ public class RaindropController : MonoSingleton<RaindropController>
     private void DestroyRaindrop(RaindropOperation toDestroy)
     {
         Vector3 raindropPosition = toDestroy.transform.position;
-        Debug.Log("Destroy Raindrop at Position: " + raindropPosition);
 
+        lives--;
+        UI_RaindropsGame.Instance.SetLives(lives);
 
+        if (IsGameOverCondition)
+            GameController.Instance.SetState(GameController.EGameState.GameOver);
 
         //DESTROY
         Destroy(toDestroy.gameObject);
@@ -98,9 +108,7 @@ public class RaindropController : MonoSingleton<RaindropController>
 
     private void SolveRaindrop(RaindropOperation solvedRaindrop)
     {
-        Debug.Log("Solved Raindrop: " + solvedRaindrop.gameObject.name);
-
-
+        UI_RaindropsGame.Instance.SetScore(score);
 
         //DESTROY
         Destroy(solvedRaindrop.gameObject);

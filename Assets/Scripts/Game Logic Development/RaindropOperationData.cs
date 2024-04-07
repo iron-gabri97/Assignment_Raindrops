@@ -90,4 +90,21 @@ public class RaindropOperationData : MonoBehaviour
         return GetRandomFirstValue(operation);
     }
 
+    public int GetRaindropScore()
+    {
+        switch(operation)
+        {
+            case EOperation.Sum:
+                return 1;
+            case EOperation.Difference:
+                return 2;
+            case EOperation.Multiplication:
+                return 3;
+            case EOperation.Division:
+                return 4;
+            default:
+                Debug.LogError("Invalid operation value has been provided");
+                return 0;
+        }
+    }
 }
