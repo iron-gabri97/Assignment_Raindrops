@@ -273,6 +273,14 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 715030148936601881, guid: 44a834f7ae15eaa438d8a25760a8cdb0, type: 3}
+      propertyPath: m_Type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 715030148936601881, guid: 44a834f7ae15eaa438d8a25760a8cdb0, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 10917, guid: 0000000000000000f000000000000000, type: 0}
     - target: {fileID: 2066328695942464739, guid: 44a834f7ae15eaa438d8a25760a8cdb0, type: 3}
       propertyPath: m_Name
       value: UIControllerGame
@@ -299,12 +307,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3046314337526172894, guid: 44a834f7ae15eaa438d8a25760a8cdb0, type: 3}
       propertyPath: m_Type
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3046314337526172894, guid: 44a834f7ae15eaa438d8a25760a8cdb0, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: c605ffbe44980ba4eb66a72ab5035f71, type: 3}
+      objectReference: {fileID: 10917, guid: 0000000000000000f000000000000000, type: 0}
     - target: {fileID: 3056514476025612624, guid: 44a834f7ae15eaa438d8a25760a8cdb0, type: 3}
       propertyPath: m_Type
       value: 0
@@ -357,6 +365,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 10917, guid: 0000000000000000f000000000000000, type: 0}
+    - target: {fileID: 6118564881020360902, guid: 44a834f7ae15eaa438d8a25760a8cdb0, type: 3}
+      propertyPath: m_Type
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6118564881020360902, guid: 44a834f7ae15eaa438d8a25760a8cdb0, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -427,9 +439,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7845112944907501739, guid: 44a834f7ae15eaa438d8a25760a8cdb0, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8340254076394976220, guid: 44a834f7ae15eaa438d8a25760a8cdb0, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8799415466149396053, guid: 44a834f7ae15eaa438d8a25760a8cdb0, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
@@ -439,7 +455,7 @@ PrefabInstance:
       objectReference: {fileID: 10917, guid: 0000000000000000f000000000000000, type: 0}
     - target: {fileID: 9168299611037063251, guid: 44a834f7ae15eaa438d8a25760a8cdb0, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 4010514937576461205, guid: 44a834f7ae15eaa438d8a25760a8cdb0, type: 3}

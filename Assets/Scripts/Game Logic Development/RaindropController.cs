@@ -11,7 +11,7 @@ public class RaindropController : MonoSingleton<RaindropController>
     //DATA
 
     //SETTINGS
-    [SerializeField] int maxConcurrentItems = 4;
+    [SerializeField] int maxConcurrentItems = 3;
     [SerializeField] int maxItemsPerSpawnIteration = 1;
     [SerializeField] float maxSpawnIterationCooldown = 1.0f;
 
