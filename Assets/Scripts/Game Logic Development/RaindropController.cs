@@ -27,6 +27,17 @@ public class RaindropController : MonoSingleton<RaindropController>
     public bool IsMaxConcurrentItems { get { return maxConcurrentItems <= concurrentItems; } }
     public bool IsGameOverCondition { get { return lives <= 0; } }
 
+    //DIFFICULTY
+    int difficultyGameValue;
+    [SerializeField] List<DifficultySettingsSO> difficultySettings = new();
+
+    //SCRIPTABLEOBJECTS
+    Dictionary<int, float> speedCoefficientConfiguration = new();
+    public float SpeedDifficultyValue { get { return speedCoefficientConfiguration[difficultyGameValue]; } }
+
+    Dictionary<int, float> scoreCoefficientConfiguration = new();
+    public float ScoreDifficultyValue { get { return scoreCoefficientConfiguration[difficultyGameValue]; } }
+
     //PREFABS
     [SerializeField] RaindropOperation raindropOpPrefab;
 
