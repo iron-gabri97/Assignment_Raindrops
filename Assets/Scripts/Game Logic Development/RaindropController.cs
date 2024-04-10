@@ -55,6 +55,9 @@ public class RaindropController : MonoSingleton<RaindropController>
         UI_RaindropsGame.Instance.SetScore(score);
         UI_RaindropsGame.Instance.SetLives(lives);
 
+        difficultyGameValue = Helper_GameSettings.GameSettings.GetGameSpeed();
+
+
     }
 
     // Update is called once per frame
@@ -119,12 +122,33 @@ public class RaindropController : MonoSingleton<RaindropController>
 
     private void SolveRaindrop(RaindropOperation solvedRaindrop)
     {
-        score = score + solvedRaindrop.RaindropOperationData.GetRaindropScore();
+        score += ScoreDifficultyValue * solvedRaindrop.RaindropOperationData.GetRaindropScore();
         UI_RaindropsGame.Instance.SetScore(score);
 
         //DESTROY
         Destroy(solvedRaindrop.gameObject);
         concurrentItems--;
+    }
+
+    private void InitializeDifficultyConfiguration()
+    {
+        if(difficultySettings.Count > 0)
+        {
+            foreach(DifficultySettingsSO diffsetSO in difficultySettings)
+            {
+                speedCoefficientConfiguration.Add((int) diffsetSO.DifficultyValue, diffsetSO.SpeedCoefficient);
+                scoreCoefficientConfiguration.Add((int) diffsetSO.DifficultyValue, diffsetSO.ScoreCoefficient);
+            }
+        }
+        else
+        {
+            foreach (int i in Enum.GetValues(typeof(Helper_GameSettings.GameSettings.DIFFICULTYGAME)))
+            {
+                speedCoefficientConfiguration.Add(i, 1);
+                scoreCoefficientConfiguration.Add(i, 1);
+            }
+            Debug.LogError("NO DIFFICULTY SETTINGS");
+        }
     }
 
 }

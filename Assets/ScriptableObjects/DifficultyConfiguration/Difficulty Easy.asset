@@ -9,8 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5307dac95e7dc6842b681080a07913e1, type: 3}
-  m_Name: Raindrops
+  m_Script: {fileID: 11500000, guid: 0e48c941bdc5b8e43a2dc3eff8fd3e2d, type: 3}
+  m_Name: Difficulty Easy
   m_EditorClassIdentifier: 
-  associatedSceneName: Raindrops
-  stageID: 1
+  difficultyValue: 0
+  speedCoefficient: 1
+  scoreCoefficient: 1
