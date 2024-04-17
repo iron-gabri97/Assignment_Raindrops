@@ -23,6 +23,10 @@ public class UI_MainMenu : MonoBehaviour
     {
         SceneNavigationController.Instance.LoadScene(SceneNavigationController.eSceneName.Raindrops);
     }
+    public void ManageOptions()
+    {
+        UI_RaindropsMainMenu.OpenOptions();
+    }
     public void ManageQuit()
     {
         Helper.QuitGame();

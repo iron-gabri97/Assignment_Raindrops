@@ -27,6 +27,17 @@ public class RaindropController : MonoSingleton<RaindropController>
     public bool IsMaxConcurrentItems { get { return maxConcurrentItems <= concurrentItems; } }
     public bool IsGameOverCondition { get { return lives <= 0; } }
 
+    //DIFFICULTY
+    int difficultyGameValue;
+    [SerializeField] List<DifficultySettingsSO> difficultySettings = new();
+
+    //SCRIPTABLEOBJECTS
+    Dictionary<int, float> speedCoefficientConfiguration = new();
+    public float SpeedDifficultyValue { get { return speedCoefficientConfiguration[difficultyGameValue]; } }
+
+    Dictionary<int, float> scoreCoefficientConfiguration = new();
+    public float ScoreDifficultyValue { get { return scoreCoefficientConfiguration[difficultyGameValue]; } }
+
     //PREFABS
     [SerializeField] RaindropOperation raindropOpPrefab;
 
@@ -43,6 +54,10 @@ public class RaindropController : MonoSingleton<RaindropController>
         lives = maxLives;
         UI_RaindropsGame.Instance.SetScore(score);
         UI_RaindropsGame.Instance.SetLives(lives);
+
+        difficultyGameValue = Helper_GameSettings.GameSettings.GetGameSpeed();
+        InitializeDifficultyConfiguration();
+
 
     }
 
@@ -108,12 +123,33 @@ public class RaindropController : MonoSingleton<RaindropController>
 
     private void SolveRaindrop(RaindropOperation solvedRaindrop)
     {
-        score = score + solvedRaindrop.RaindropOperationData.GetRaindropScore();
+        score += ScoreDifficultyValue * solvedRaindrop.RaindropOperationData.GetRaindropScore();
         UI_RaindropsGame.Instance.SetScore(score);
 
         //DESTROY
         Destroy(solvedRaindrop.gameObject);
         concurrentItems--;
+    }
+
+    private void InitializeDifficultyConfiguration()
+    {
+        if(difficultySettings.Count > 0)
+        {
+            foreach(DifficultySettingsSO diffsetSO in difficultySettings)
+            {
+                speedCoefficientConfiguration.Add((int) diffsetSO.DifficultyValue, diffsetSO.SpeedCoefficient);
+                scoreCoefficientConfiguration.Add((int) diffsetSO.DifficultyValue, diffsetSO.ScoreCoefficient);
+            }
+        }
+        else
+        {
+            foreach (int i in Enum.GetValues(typeof(Helper_GameSettings.GameSettings.DIFFICULTYGAME)))
+            {
+                speedCoefficientConfiguration.Add(i, 1);
+                scoreCoefficientConfiguration.Add(i, 1);
+            }
+            Debug.LogError("NO DIFFICULTY SETTINGS");
+        }
     }
 
 }

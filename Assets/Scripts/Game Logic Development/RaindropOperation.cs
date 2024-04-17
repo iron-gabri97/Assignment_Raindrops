@@ -11,6 +11,7 @@ public class RaindropOperation : MonoBehaviour
 
     //DATA
     [SerializeField] float raindropSpeed = 1.0f;
+    float speedDiffCoeff = 1.0f;
 
     //PREFAB
     [SerializeField] private TMP_Text textFirstNumber;
@@ -36,6 +37,9 @@ public class RaindropOperation : MonoBehaviour
 
         raindropOperationData = new RaindropOperationData(RaindropOperationData.GetRandomFirstValue(randomOP), RaindropOperationData.GetRandomFirstValue(randomOP), randomOP);
 
+        //DIFFICULTY
+        speedDiffCoeff = RaindropController.Instance.SpeedDifficultyValue;
+
         SetVisibleContent();
     }
 
@@ -44,7 +48,7 @@ public class RaindropOperation : MonoBehaviour
     {
         if(GameController.Instance.isPlaying)
         {
-            transform.position = transform.position + raindropSpeed * Time.fixedDeltaTime * Vector3.down;
+            ManageMovement();
         }
     }
 
@@ -89,6 +93,14 @@ public class RaindropOperation : MonoBehaviour
             textOperation.text = "?";
             textSecondNumber.text = ">:(";
         }
+    }
+
+    private void ManageMovement()
+    {
+        Vector3 translation;
+        translation = speedDiffCoeff * raindropSpeed * Time.fixedDeltaTime * Vector3.down;
+        
+        transform.position += translation;
     }
 
     //EVENT ACTIVATION METHOD
