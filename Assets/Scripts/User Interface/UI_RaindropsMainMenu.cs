@@ -41,6 +41,11 @@ public class UI_RaindropsMainMenu : MonoSingleton<UI_RaindropsMainMenu>
         MainMenu?.Invoke(Instance, new(MainMenuEventArgs.EType.MAIN_MENU));
     }
 
+    public static void OpenOptions()
+    {
+        MainMenu?.Invoke(Instance, new(MainMenuEventArgs.EType.MAIN_OPTIONS));
+    }
+
     //EVENT ACTIVATION METHOD
     public static void OnMainMenu(object sender, MainMenuEventArgs eventArg)
     {

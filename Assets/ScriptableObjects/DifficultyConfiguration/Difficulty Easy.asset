@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Difficulty Easy
   m_EditorClassIdentifier: 
   difficultyValue: 0
-  speedCoefficient: 1
+  speedCoefficient: 0.75
   scoreCoefficient: 1

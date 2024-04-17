@@ -56,6 +56,7 @@ public class RaindropController : MonoSingleton<RaindropController>
         UI_RaindropsGame.Instance.SetLives(lives);
 
         difficultyGameValue = Helper_GameSettings.GameSettings.GetGameSpeed();
+        InitializeDifficultyConfiguration();
 
 
     }

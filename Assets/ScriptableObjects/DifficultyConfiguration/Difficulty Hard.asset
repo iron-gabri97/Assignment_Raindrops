@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e48c941bdc5b8e43a2dc3eff8fd3e2d, type: 3}
   m_Name: Difficulty Hard
   m_EditorClassIdentifier: 
-  difficultyValue: 0
-  speedCoefficient: 1
-  scoreCoefficient: 1
+  difficultyValue: 2
+  speedCoefficient: 2
+  scoreCoefficient: 1.5
