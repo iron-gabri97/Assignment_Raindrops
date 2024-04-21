@@ -148,7 +148,7 @@ public class RaindropController : MonoSingleton<RaindropController>
                 speedCoefficientConfiguration.Add(i, 1);
                 scoreCoefficientConfiguration.Add(i, 1);
             }
-            Debug.LogError("NO DIFFICULTY SETTINGS");
+ //           Debug.LogError("NO DIFFICULTY SETTINGS");
         }
     }
 
