@@ -55,16 +55,24 @@ public class RaindropOperationData : MonoBehaviour
     
     public RaindropOperationData(int firstValue = 1, int secondValue = 1, EOperation operation = EOperation.Sum)
     {
-        firstNumber = firstValue;
-        secondNumber = secondValue;
         this.operation = operation;
+        switch(operation)
+        {
+            case EOperation.Division:
+                firstNumber = firstValue * secondValue;
+                secondNumber = secondValue;
+                break;
+            default:
+                firstNumber = firstValue;
+                secondNumber = secondValue;
+                break;
+        }
     }
 
     //RANDOMIZATION
     public static EOperation GetRandomOp()
     {
-        int randomInt = UnityEngine.Random.Range(0, EOperation.GetNames(typeof(EOperation)).Length);
-        return (EOperation)randomInt;
+        return (EOperation) UnityEngine.Random.Range(0, EOperation.GetNames(typeof(EOperation)).Length);
     }
 
     public static int GetRandomFirstValue(EOperation operation = EOperation.Sum)

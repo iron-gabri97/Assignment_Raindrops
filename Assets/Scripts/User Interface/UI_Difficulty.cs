@@ -15,23 +15,20 @@ public class UI_Difficulty : MonoBehaviour
 
     void Awake()
     {
-        
+        UI_RaindropsMainMenu.MainMenu += ManageEventMainMenu;
     }
 
     void OnDestroy()
     {
-        
+        UI_RaindropsMainMenu.MainMenu -= ManageEventMainMenu;
     }
 
     private void UpdateVisualisation()
     {
-
+        difficultyDropDown.value = Helper_GameSettings.GameSettings.GetGameSpeed();
     }
 
-    public void ManageDifficultyChange(int newValue)
-    {
-        Helper_GameSettings.GameSettings.SetGameSpeed((Helper_GameSettings.GameSettings.DIFFICULTYGAME) newValue);
-    }
+    public void ManageDifficultyChange(int newValue) => Helper_GameSettings.GameSettings.SetGameSpeed((Helper_GameSettings.GameSettings.DIFFICULTYGAME) newValue);
 
     public void OpenMainMenu()
     {
